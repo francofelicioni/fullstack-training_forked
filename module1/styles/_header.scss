@@ -1,0 +1,112 @@
+.header_container {
+    display: block;
+    border-bottom: var(--grey-text) solid 3px;
+    background-color: var(--white);
+    position: fixed;
+    width: var(--full-width);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+    margin: 0;
+    z-index: 10;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 0.2rem 0;
+
+        .title {
+            color: var(--blue);
+            font-family: var(--font-title);
+            font-weight: 300;
+            padding: 0.5rem 1rem;
+        }
+
+        .btn {
+            width: 20%;
+            border: none;
+            
+            i {
+                color: var(--blue);
+                cursor: pointer;
+            }
+
+        }
+
+        .open_menu_input:checked + .nav_links{
+            display: none;
+        }
+
+        #btn_close_menu{
+            display: none;
+        }
+    }
+    .nav_links {
+        display: none;
+        margin: 20px 20px;
+        background-color: var(--white);
+        width: var(--full-width);
+        line-height: 2rem;
+        .links {
+            list-style: none;
+
+            .link {
+                font-family: var(--font-text);
+                font-weight: 700;
+                text-decoration: none;
+                color: var(--grey-text);
+                font-size: 11px;
+                line-height: 20px;
+                letter-spacing: 3.28px;
+                margin: 10px 0;
+
+                &:hover {
+                    color: var(--black);
+                    font-weight: 800;
+                }
+            }
+        }
+        &:hover{
+            color: var(--black);
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .header_container{
+        width: var(--full-width);
+        display: flex;
+        justify-content: space-between;
+
+        .header{
+            .btn_container{
+                display: none;
+            }
+        }
+
+        .nav_links{
+            display: block;
+            width: fit-content;
+            align-self: center;
+            margin: 0;
+            height: 100%;
+            //z-index: 1;
+            .links{
+                display: flex;
+                flex-direction: row;
+                margin: 0 2rem;
+                height: 100%;
+                .link{
+                    margin: 0 30px;
+                    &:hover{
+                        color: var(--black);
+                        border-bottom: var(--blue) solid 3px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .btn {
+        display: none;
+    }
+}
