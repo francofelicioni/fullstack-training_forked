@@ -1,18 +1,10 @@
+@use "./global";
 @use "./variables";
 @use "./header";
 @use "./whyus";
 @use "./benefits";
-@use "./prices";
+@use "./pricing";
 @use "./contact";
 
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body {
-    min-width: 320px;
-    background-color: var(--white);
-    
-}
+
