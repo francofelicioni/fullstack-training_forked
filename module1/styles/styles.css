@@ -18,7 +18,7 @@ body {
   --font-title: "Raleway", sans-serif;
   --blue: #08A6E4;
   --blue-hover: #078fc5;
-  --blue-shadow: #07ace6;
+  --blue-shadow: #07ace64a;
   --red: #FB3B64;
   --red-hover: #fa1e4e;
   --red-shadow: #eb476e;
@@ -541,7 +541,7 @@ body {
   transition: 0.15s ease-in-out;
 }
 .pricing_container .cards_container #professional .btn_pricing {
-  background-color: var(--blue-shadow);
+  background-color: var(--blue);
 }
 .pricing_container .cards_container #premium {
   border-color: var(--green);
@@ -602,5 +602,92 @@ body {
 #professional,
 #premium {
     width: 372px;
+  }
+}
+.contact_container {
+  padding-left: 20px;
+}
+.contact_container .header {
+  font-family: var(--font-text);
+  font-size: 16px;
+}
+.contact_container .header .title {
+  font-family: var(--font-title);
+}
+.contact_container .header .title h2 {
+  font-size: 40px;
+}
+.contact_container .header .contact_info {
+  color: var(--grey-text);
+  margin: 30px 0;
+}
+.contact_container .header .contact_info p {
+  margin: 10px 0;
+}
+.contact_container .header .contact_info p i {
+  color: var(--blue);
+}
+.contact_container .header .contact_info p .fa-phone {
+  transform: rotate(90deg);
+}
+.contact_container .form {
+  margin: 40px 0;
+  max-width: 600px;
+}
+.contact_container .form .label {
+  font-family: var(--font-text);
+  color: var(--blue);
+  font-size: 11px;
+}
+.contact_container .form .input_text {
+  width: 95%;
+  border: none;
+  border-bottom: 1px solid var(--grey-input-bottom);
+  margin-top: 20px;
+}
+.contact_container .form .policy {
+  margin: 20px 20px 20px 0;
+  display: flex;
+}
+.contact_container .form .policy input {
+  margin-top: 5px;
+  margin-right: 10px;
+  padding-top: 5px;
+  align-self: flex-start;
+}
+.contact_container .form .policy label {
+  font-family: var(--font-text);
+  font-size: 12px;
+}
+.contact_container .form .submit_container {
+  display: flex;
+  justify-content: end;
+  max-width: 600px;
+  margin-right: 20px;
+}
+.contact_container .form .submit_container .submit_button {
+  background-color: var(--blue);
+  box-shadow: 5px 10px 14px var(--blue-shadow);
+  border-radius: 35px;
+  border: none;
+  color: var(--white);
+  width: 226px;
+  height: 57px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .contact_container {
+    display: flex;
+    justify-content: center;
+  }
+  .contact_container .header {
+    width: 30%;
+  }
+  .contact_container .form {
+    margin-top: 0;
+    width: 40%;
+  }
+  .contact_container .form .input_text {
+    margin-bottom: 30px;
   }
 }/*# sourceMappingURL=styles.css.map */
