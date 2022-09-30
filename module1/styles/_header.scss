@@ -13,6 +13,7 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 0 0.2rem 0;
+        position: relative;
 
         .title {
             color: var(--blue);
@@ -20,93 +21,114 @@
             font-weight: 300;
             padding: 0.5rem 1rem;
         }
+    }
+    .btn {
+        width: 10%;
+        border: none;
+        position: absolute;
+        top: 15px;
+        right: 0;
 
-        .btn {
-            width: 20%;
-            border: none;
-            
-            i {
-                color: var(--blue);
-                cursor: pointer;
-            }
-
+        img {
+            color: var(--blue);
+            cursor: pointer;
+            width: 25px;
         }
-
-        .open_menu_input:checked + .nav_links{
-            display: none;
-        }
-
-        #btn_close_menu{
+        .close_btn{
             display: none;
         }
     }
+
+    input {
+        display: none;
+    }
+
     .nav_links {
         display: none;
         margin: 20px 20px;
         background-color: var(--white);
         width: var(--full-width);
         line-height: 2rem;
+        height: 55px;
+        padding-top: 10px;
         .links {
             list-style: none;
 
             .link {
-                font-family: var(--font-text);
-                font-weight: 700;
-                text-decoration: none;
-                color: var(--grey-text);
-                font-size: 11px;
-                line-height: 20px;
-                letter-spacing: 3.28px;
-                margin: 10px 0;
-
-                &:hover {
-                    color: var(--black);
+                & :hover {
+                    color: var(--black) !important;
                     font-weight: 800;
+                    cursor: pointer;
+                }
+                a {
+                    font-family: var(--font-text);
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: var(--grey-text);
+                    font-size: 11px;
+                    line-height: 20px;
+                    letter-spacing: 3.28px;
+                    margin: 10px 0;
                 }
             }
         }
-        &:hover{
-            color: var(--black);
-        }
+    }
+
+    .menu_input:checked + .nav_links {
+        display: block;
+        height: inherit;
+        padding-top: 0;
+        
+    }
+    //CHANGE INCON TO "X" PENDING --> not working ¿?
+    .menu_input:checked + .close_btn {
+        display: block;
     }
 }
 
+
+
 @media only screen and (min-width: 1000px) {
-    .header_container{
+    .header_container {
         width: var(--full-width);
         display: flex;
         justify-content: space-between;
 
-        .header{
-            .btn_container{
+        .header {
+            .btn_container {
                 display: none;
             }
         }
 
-        .nav_links{
+        .nav_links {
             display: block;
             width: fit-content;
             align-self: center;
             margin: 0;
-            height: 100%;
-            //z-index: 1;
-            .links{
+
+            .links {
                 display: flex;
                 flex-direction: row;
                 margin: 0 2rem;
                 height: 100%;
-                .link{
+
+                .link {
                     margin: 0 30px;
-                    &:hover{
-                        color: var(--black);
-                        border-bottom: var(--blue) solid 3px;
-                    }
                 }
             }
         }
     }
-    
+
     .btn {
         display: none;
+    }
+
+    //Hover effect in navbar
+    .link:hover {
+        border-bottom: var(--blue) solid 3px;
+        cursor: pointer;
+        & a {
+            color: var(--black)!important;
+        }
     }
 }

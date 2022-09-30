@@ -50,6 +50,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 0 0.2rem 0;
+  position: relative;
 }
 .header_container .header .title {
   color: var(--blue);
@@ -57,18 +58,22 @@ body {
   font-weight: 300;
   padding: 0.5rem 1rem;
 }
-.header_container .header .btn {
-  width: 20%;
+.header_container .btn {
+  width: 10%;
   border: none;
+  position: absolute;
+  top: 15px;
+  right: 0;
 }
-.header_container .header .btn i {
+.header_container .btn img {
   color: var(--blue);
   cursor: pointer;
+  width: 25px;
 }
-.header_container .header .open_menu_input:checked + .nav_links {
+.header_container .btn .close_btn {
   display: none;
 }
-.header_container .header #btn_close_menu {
+.header_container input {
   display: none;
 }
 .header_container .nav_links {
@@ -77,11 +82,18 @@ body {
   background-color: var(--white);
   width: var(--full-width);
   line-height: 2rem;
+  height: 55px;
+  padding-top: 10px;
 }
 .header_container .nav_links .links {
   list-style: none;
 }
-.header_container .nav_links .links .link {
+.header_container .nav_links .links .link :hover {
+  color: var(--black) !important;
+  font-weight: 800;
+  cursor: pointer;
+}
+.header_container .nav_links .links .link a {
   font-family: var(--font-text);
   font-weight: 700;
   text-decoration: none;
@@ -91,12 +103,13 @@ body {
   letter-spacing: 3.28px;
   margin: 10px 0;
 }
-.header_container .nav_links .links .link:hover {
-  color: var(--black);
-  font-weight: 800;
+.header_container .menu_input:checked + .nav_links {
+  display: block;
+  height: inherit;
+  padding-top: 0;
 }
-.header_container .nav_links:hover {
-  color: var(--black);
+.header_container .menu_input:checked + .close_btn {
+  display: block;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -115,7 +128,6 @@ body {
     width: fit-content;
     align-self: center;
     margin: 0;
-    height: 100%;
   }
   .header_container .nav_links .links {
     display: flex;
@@ -126,18 +138,21 @@ body {
   .header_container .nav_links .links .link {
     margin: 0 30px;
   }
-  .header_container .nav_links .links .link:hover {
-    color: var(--black);
-    border-bottom: var(--blue) solid 3px;
-  }
   .btn {
     display: none;
+  }
+  .link:hover {
+    border-bottom: var(--blue) solid 3px;
+    cursor: pointer;
+  }
+  .link:hover a {
+    color: var(--black) !important;
   }
 }
 .whyus_container {
   display: block;
   position: relative;
-  top: 6rem;
+  top: 10rem;
 }
 .whyus_container .header {
   display: flex;

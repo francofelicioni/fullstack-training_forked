@@ -18,6 +18,7 @@
 
 <body>
     <header class="header_container">
+
         <div class="header">
             <div class="title">
                 <h1>OXYGENShop</h1>
@@ -27,22 +28,27 @@
                 <img src="./assets/icons/close_menu.png" alt="Daily entries"></img>
             </button> -->
 
-            <div class="btn_container">
-                <label for="btn_open_menu" class="btn">
-                    <i class="fa fa-sharp fa-solid fa-bars"></i>
-                </label>
-                <input type="checkbox" id="btn_open_menu" class="open_menu_input">
-            </div>
         </div>
+        <label for="open_menu_input" class="btn">
+            <img src="./assets/icons/bars-1.svg" class="burguer_btn" alt="Menu"></img>
+            <img src="./assets/icons/close_menu.png" class="close_btn" alt="Menu"></img>
+        </label>
+        <input type="checkbox" id="open_menu_input" class="menu_input">
+
+
+
 
         <nav class="nav_links">
             <ul class="links">
-                <li><a class="link" href="./index.html">WHY US</a></li>
-                <li><a class="link" href="#benefits">BENEFITS</a></li>
-                <li><a class="link" href="#pricing">PRICES</a></li>
-                <li><a class="link" href="#contact">CONTACT</a></li>
+                <li class="link"><a href="./index.html">WHY US</a></li>
+                <li class="link"><a href="#benefits">BENEFITS</a></li>
+                <li class="link"><a href="#pricing">PRICES</a></li>
+                <li class="link"><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
+
+
+
     </header>
 
     <!-- WHY US -->
@@ -122,14 +128,14 @@
         <h2 class="title">Pricing</h2>
 
         <div class="cards_container">
-            <div class="card_pricing" id="basic" >
+            <div class="card_pricing" id="basic">
                 <div class="pricing_container_title">
                     <h2>Basic</h2>
                     <p class="amount">$0</p>
                 </div>
                 <div class="pricing_detail">
                     <ul>
-                        <li>  
+                        <li>
                             <p>
                                 <img src="./assets/icons/check-square-thin.svg" alt="Check">
                                 100 MB HDD
@@ -206,7 +212,7 @@
                     </ul>
                     <button class="btn_pricing"> Begin </button>
                 </div>
-            
+
             </div>
             <div class="card_pricing" id="premium">
                 <div class="pricing_container_title">
@@ -248,7 +254,7 @@
                     </ul>
                     <button class="btn_pricing"> Begin </button>
                 </div>
-            
+
             </div>
         </div>
     </section>
@@ -280,9 +286,12 @@
                 <div class="policy">
                     <input type="checkbox">
                     <label>I hereby give consent for my personal data included in my application to be processed for the
-                        purposes of the recruitment process under the European Parliament’s and Council of the European Union
-                        Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of
-                        personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection
+                        purposes of the recruitment process under the European Parliament’s and Council of the European
+                        Union
+                        Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the
+                        processing of
+                        personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data
+                        Protection
                         Directive)</label><br>
                 </div>
                 <div class="submit_container">
