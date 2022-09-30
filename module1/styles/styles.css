@@ -658,6 +658,7 @@ body {
 .contact_container .form .policy label {
   font-family: var(--font-text);
   font-size: 12px;
+  color: var(--grey-check);
 }
 .contact_container .form .submit_container {
   display: flex;
@@ -689,5 +690,48 @@ body {
   }
   .contact_container .form .input_text {
     margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 999px) {
+  .contact_container {
+    margin-left: 25%;
+  }
+  .contact_container .form {
+    width: 70%;
+  }
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
+}
+footer .title {
+  margin-right: 10px;
+}
+footer .title h1 {
+  font-family: var(--font-title);
+  font-size: 26px;
+  color: var(--blue);
+  font-weight: 100;
+}
+footer .title p {
+  font-family: var(--font-text);
+  font-size: 11px;
+  color: var(--grey-text);
+}
+footer .social_media {
+  margin-right: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .social_media img {
+  margin: 0 10px;
+}
+
+@media only screen and (min-width: 800px) {
+  footer {
+    padding: 20px 20%;
   }
 }/*# sourceMappingURL=styles.css.map */
