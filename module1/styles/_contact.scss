@@ -1,0 +1,97 @@
+.contact_container {
+    padding-left: 20px;
+    .header {
+        font-family: var(--font-text);
+        font-size: 16px;
+        .title {
+            font-family: var(--font-title);
+            h2 {
+                font-size: 40px;
+            }
+        }
+        .contact_info {
+            color: var(--grey-text);
+            margin: 30px 0;
+            p {
+                margin: 10px 0;
+                i {
+                    color: var(--blue);
+                }
+                .fa-phone {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    .form {
+        margin: 40px 0;
+        max-width: 600px;
+        .label {
+            font-family: var(--font-text);
+            color: var(--blue);
+            font-size: 11px;
+        }
+        .input_text {
+            width: 95%;
+            border: none;
+            border-bottom: 1px solid var(--grey-input-bottom);
+            margin-top: 20px;
+        }
+        .policy {
+            margin: 20px 20px 20px 0;
+            display: flex;
+            input {
+                margin-top: 5px;
+                margin-right: 10px;
+                padding-top: 5px;
+                align-self: flex-start;
+            }
+            label {
+                font-family: var(--font-text);
+                font-size: 12px;
+                color: var(--grey-check)
+            }
+        }
+        .submit_container {
+            display: flex;
+            justify-content: end;
+            max-width: 600px;
+            margin-right: 20px;
+            .submit_button {
+                background-color: var(--blue);
+                box-shadow: 5px 10px 14px var(--blue-shadow);
+                border-radius: 35px;
+                border: none;
+                color: var(--white);
+                width: 226px;
+                height: 57px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .contact_container {
+        display: flex;
+        justify-content: center;
+        .header {
+            width: 30%;
+        }
+        .form {
+            margin-top: 0;
+            width: 40%;
+            .input_text {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 999px){
+    .contact_container{
+        margin-left: 25%;
+        .form{
+            width: 70%;
+        }
+    }
+}

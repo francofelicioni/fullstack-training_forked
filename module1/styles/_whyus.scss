@@ -1,0 +1,93 @@
+.whyus_container {
+    display: block;
+    position: relative;
+    top: 10rem;
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+
+        .title {
+            font-family: var(--font-title);
+            font-weight: 500;
+            margin: 0;
+            font-size: 35px;
+        }
+
+        .description {
+            font-family: var(--font-text);
+            font-weight: 400;
+            margin: 1rem 0;
+            font-size: 16px;
+        }
+        .header_btn_container {
+            width: 100%;
+            .btn_shop {
+                margin-top: 20px;
+                width: 80%;
+                max-width: 440px;
+                height: 3rem;
+                background: var(--blue);
+                box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+                border-radius: 40px;
+                border: none;
+                font-family: var(--font-text);
+                color: var(--white);
+            }
+        }
+    }
+
+    .whyus_img_container {
+        overflow: hidden;
+        .whyus_img {
+            height: inherit;
+            width: 190%;
+            object-fit: contain;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .platform_description {
+        font-family: var(--font-text);
+        font-weight: 300;
+        font-size: 30px;
+        margin: 0.5rem 0;
+        text-align: center;
+        padding: 0 3rem;
+    }
+    .platform_cards_container {
+        align-self: center;
+
+        .platform_card{
+            display: block;
+            margin: 30px auto;
+            height: fit-content;
+        }
+
+        .card1 {
+            content: url("../assets/images/Card1.png");
+        }
+        .card2 {
+            content: url("../assets/images/Card2.png");
+        }
+        .card3 {
+            content: url("../assets/images/Card3.png");
+            padding-bottom: 3rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .whyus_img_container {
+        height: 30rem;
+    }
+
+    .platform_cards_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
