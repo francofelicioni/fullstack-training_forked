@@ -22,35 +22,42 @@
             padding: 0.5rem 1rem;
         }
     }
-    .btn {
-        width: 10%;
+    .menu_header {
         border: none;
         position: absolute;
         top: 15px;
         right: 0;
-
-        img {
-            color: var(--blue);
-            cursor: pointer;
-            width: 25px;
-        }
-        .close_btn{
-            display: none;
-        }
+        color: var(--blue);
+        cursor: pointer;
+        width: 25px;
+        margin-right: 20px;
     }
 
-    input {
+    .burger_btn {
+        content: url("../assets/icons/bars-1.svg");
+    }
+
+    .close_btn {
+        content: url("../assets/icons/close_menu.png");
+        width: 18px;
+    }
+
+    .nav_links_hidden {
         display: none;
+    }
+
+    .close_btn {
+        content: url("../assets/icons/close_menu.png");
     }
 
     .nav_links {
-        display: none;
         margin: 20px 20px;
         background-color: var(--white);
         width: var(--full-width);
         line-height: 2rem;
-        height: 55px;
+        height: 130px;
         padding-top: 10px;
+        
         .links {
             list-style: none;
 
@@ -73,20 +80,11 @@
             }
         }
     }
-
-    .menu_input:checked + .nav_links {
-        display: block;
-        height: inherit;
-        padding-top: 0;
-        
-    }
     //CHANGE INCON TO "X" PENDING --> not working ¿?
     .menu_input:checked + .close_btn {
         display: block;
     }
 }
-
-
 
 @media only screen and (min-width: 1000px) {
     .header_container {
@@ -94,10 +92,8 @@
         display: flex;
         justify-content: space-between;
 
-        .header {
-            .btn_container {
-                display: none;
-            }
+        .menu_header{
+            display: none;
         }
 
         .nav_links {
@@ -105,7 +101,7 @@
             width: fit-content;
             align-self: center;
             margin: 0;
-
+            height: 55px;
             .links {
                 display: flex;
                 flex-direction: row;
@@ -128,7 +124,7 @@
         border-bottom: var(--blue) solid 3px;
         cursor: pointer;
         & a {
-            color: var(--black)!important;
+            color: var(--black) !important;
         }
     }
 }
