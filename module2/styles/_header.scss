@@ -1,3 +1,15 @@
+    .scrollbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: var(--blue);
+        width: 0%;
+        height: 5px;
+        z-index: 99;
+        transition: width 0.2s ease-out;
+    }
+
+
 .header_container {
     display: block;
     border-bottom: var(--grey-text) solid 3px;
@@ -57,7 +69,7 @@
         line-height: 2rem;
         height: 130px;
         padding-top: 10px;
-        
+
         .links {
             list-style: none;
 
@@ -80,10 +92,6 @@
             }
         }
     }
-    //CHANGE INCON TO "X" PENDING --> not working ¿?
-    .menu_input:checked + .close_btn {
-        display: block;
-    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -92,7 +100,7 @@
         display: flex;
         justify-content: space-between;
 
-        .menu_header{
+        .menu_header {
             display: none;
         }
 
@@ -113,10 +121,6 @@
                 }
             }
         }
-    }
-
-    .btn {
-        display: none;
     }
 
     //Hover effect in navbar

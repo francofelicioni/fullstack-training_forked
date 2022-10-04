@@ -35,6 +35,17 @@ body {
   --full-width: 100%;
 }
 
+.scrollbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--blue);
+  width: 0%;
+  height: 5px;
+  z-index: 99;
+  transition: width 0.2s ease-out;
+}
+
 .header_container {
   display: block;
   border-bottom: var(--grey-text) solid 3px;
@@ -107,9 +118,6 @@ body {
   letter-spacing: 3.28px;
   margin: 10px 0;
 }
-.header_container .menu_input:checked + .close_btn {
-  display: block;
-}
 
 @media only screen and (min-width: 1000px) {
   .header_container {
@@ -137,9 +145,6 @@ body {
   }
   .header_container .nav_links .links .link {
     margin: 0 30px;
-  }
-  .btn {
-    display: none;
   }
   .link:hover {
     border-bottom: var(--blue) solid 3px;
