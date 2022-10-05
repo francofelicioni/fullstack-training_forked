@@ -1,4 +1,5 @@
-import REGEX from "../utils/constants.js";
+import {REGEX, URL_POST_FORM} from "../utils/constants.js";
+import postForm from "../services/api_calls.js";
 
 //Toggle menu de header
 document.querySelector(".burger_btn").addEventListener("click", (e) => {
@@ -41,6 +42,8 @@ const name = document.querySelector(".name");
 const email = document.querySelector(".email");
 const errorName = document.querySelector(".error_message_name");
 const errorEmail = document.querySelector(".error_message_email");
+const checkbox = document.querySelector(".checkbox");
+const policy_label = document.querySelector(".policy_label");
 
 const validateForm = (e) => {
     if(e.target.name === "name") {
@@ -71,3 +74,17 @@ inputs.forEach((input) => {
     input.addEventListener("keyup", validateForm);
 });
 
+//Post form data
+form.addEventListener("submit", (e) => {
+    //validacion del checkbox & data;
+    const nameValue = name.value;
+    const emailValue = email.value;
+
+    e.preventDefault();
+
+    if (checkbox.checked && nameValue && emailValue){
+        policy.classList.remove("not_checked");
+        //return postForm(URL_POST_FORM, nameValue, emailValue)
+    } else policy.classList.add("not_checked");
+    
+})
