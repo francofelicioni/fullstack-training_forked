@@ -13,6 +13,27 @@ body {
   background-color: var(--white);
 }
 
+.return_top_container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--blue);
+  border-radius: 10px;
+  border: 2px solid var(--blue);
+  visibility: visible;
+  opacity: 0.7;
+}
+.return_top_container .return_top {
+  position: fixed;
+  bottom: 32px;
+  left: 32px;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
 :root {
   --font-text: "Open Sans", sans-serif;
   --font-title: "Raleway", sans-serif;
@@ -41,7 +62,7 @@ body {
   left: 0;
   background-color: var(--blue);
   width: 0%;
-  height: 5px;
+  height: 3px;
   z-index: 99;
   transition: width 0.2s ease-out;
 }
@@ -650,43 +671,65 @@ body {
 .contact_container .header .contact_info p .fa-phone {
   transform: rotate(90deg);
 }
-.contact_container .form {
+.contact_container .form_container {
   margin: 40px 0;
   max-width: 600px;
 }
-.contact_container .form .label {
+.contact_container .form_container .label {
   font-family: var(--font-text);
   color: var(--blue);
   font-size: 11px;
 }
-.contact_container .form .input_text {
+.contact_container .form_container .input_text {
   width: 95%;
   border: none;
   border-bottom: 1px solid var(--grey-input-bottom);
-  margin-top: 20px;
+  margin-top: 10px;
+  height: 30px;
+  padding: 5px;
 }
-.contact_container .form .policy {
+.contact_container .form_container .input_text:focus-visible {
+  outline: none;
+}
+.contact_container .form_container .error_message_input {
+  visibility: hidden;
+  font-family: var(--font-text);
+  font-size: 12px;
+  width: 95%;
+  text-align: end;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  color: var(--red);
+}
+.contact_container .form_container .error {
+  border: 2px solid red;
+  border-radius: 10px;
+}
+.contact_container .form_container .correct {
+  border-bottom: 2px solid var(--green);
+}
+.contact_container .form_container .policy {
   margin: 20px 20px 20px 0;
   display: flex;
 }
-.contact_container .form .policy input {
+.contact_container .form_container .policy input {
   margin-top: 5px;
   margin-right: 10px;
   padding-top: 5px;
   align-self: flex-start;
 }
-.contact_container .form .policy label {
+.contact_container .form_container .policy label {
   font-family: var(--font-text);
   font-size: 12px;
   color: var(--grey-check);
 }
-.contact_container .form .submit_container {
+.contact_container .form_container .submit_container {
   display: flex;
   justify-content: end;
   max-width: 600px;
   margin-right: 20px;
 }
-.contact_container .form .submit_container .submit_button {
+.contact_container .form_container .submit_container .submit_button {
   background-color: var(--blue);
   box-shadow: 5px 10px 14px var(--blue-shadow);
   border-radius: 35px;
@@ -704,19 +747,22 @@ body {
   .contact_container .header {
     width: 30%;
   }
-  .contact_container .form {
+  .contact_container .form_container {
     margin-top: 0;
     width: 40%;
   }
-  .contact_container .form .input_text {
-    margin-bottom: 30px;
+  .contact_container .form_container .input_text {
+    margin-bottom: 5px;
+  }
+  .contact_container .form_container .error_message_input {
+    margin-bottom: 15px;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 999px) {
   .contact_container {
     margin-left: 25%;
   }
-  .contact_container .form {
+  .contact_container .form_container {
     width: 70%;
   }
 }
