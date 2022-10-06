@@ -1,4 +1,4 @@
-.main_container_modal{
+.main_container_modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -6,6 +6,72 @@
     width: 100vw;
     height: 100vh;
     z-index: 9999999;
-    padding-top: 20%;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 10%;
+    background-color: rgba(0, 0, 0, 0.7);
+    .modal {
+        width: 60%;
+        top: 10px;
+        left: 20%;
+        padding: 40px;
+        background-color: var(--white);
+        text-align: center;
+        position: relative;
+        .close_btn_modal {
+            background-color: var(--white);
+            border: 1px solid var(--blue);
+            border-radius: 5px;
+            padding: 3px;
+            color: var(--blue);
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            img {
+                padding-top: 2px;
+            }
+            &:hover {
+                box-shadow: 0px 0px 10px var(--blue-shadow);
+                cursor: pointer;
+            }
+        }
+        .form_modal {
+            h3 {
+                font-family: var(--font-title);
+                font-size: 30px;
+            }
+            p {
+                font-family: var(--font-text);
+                font-size: 20px;
+                margin: 30px;
+            }
+            .input_text {
+                font-family: var(--font-text);
+                width: 50%;
+                border: none;
+                border-bottom: 1px solid var(--grey-input-bottom);
+                margin-bottom: 10px;
+                height: 30px;
+                padding: 5px;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+            .submit_newsletter{
+                background-color: var(--blue);
+                box-shadow: 5px 10px 14px var(--blue-shadow);
+                border-radius: 35px;
+                border: none;
+                color: var(--white);
+                width: 100px;
+                height: 50px;
+                font-family: var(--font-text);
+                font-size: 15px;
+                cursor: pointer;
+                &:hover {
+                    background-color: var(--white);
+                    color: var(--blue);
+                }
+            }
+        }
+    }
 }

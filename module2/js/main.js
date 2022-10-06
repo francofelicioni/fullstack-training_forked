@@ -11,10 +11,13 @@ document.querySelector(".burger_btn").addEventListener("click", (e) => {
 const scrollbar = document.getElementById("scrollbar");
 const body = document.querySelector(".body");
 
-const scrolling = () => {
+
+const scrolling = () => {  
     const scrollPercentage = Math.round((window.scrollY / (body.offsetHeight - window.innerHeight)) * 100);
     scrollbar.style.width = scrollPercentage + '%';
+    modalIsActive(scrollPercentage);
 };
+
 window.addEventListener("scroll", scrolling)
 
 
@@ -85,4 +88,47 @@ form.addEventListener("submit", (e) => {
         policy_label.classList.remove("not_checked");
         (nameValue && emailValue) ? postForm(URL_POST_FORM, nameValue, emailValue) : alert('Fill the form complete.')
     } else policy_label.classList.add("not_checked");
+})
+
+//Modal 
+const modalContainer = document.querySelector('.main_container_modal')
+
+    //Active w. scroll
+function modalIsActive(percentage) {
+    if (percentage === 25 && !localStorage.getItem("modalState")) {
+        modalContainer.style.display = "block";
+        localStorage.setItem("modalState", true)
+    }
+}
+
+    //Active setTimeOut
+setTimeout(() => {
+    if(!localStorage.getItem("modalState")){
+        modalContainer.style.display = "block";
+        localStorage.setItem("modalState", true)
+    }
+}, 5000);    
+
+    //Function for closing modal
+function modalClosed(){
+    if (localStorage.getItem("modalState")){
+        modalContainer.style.display =" none";
+    }
+}
+
+//Close w. button
+const closeBtn = document.querySelector(".close_btn_modal");
+closeBtn.addEventListener("click", modalClosed);
+
+//Close click outside
+const modal = document.querySelector(".modal");
+window.addEventListener("click", (e) => {
+    if(modal != e.target) {
+        modalClosed();
+    }
+})
+
+//Close w. ESC
+window.addEventListener("keyup", (e) => {
+    e.key === "Escape" ? modalClosed() : null;
 })
