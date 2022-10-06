@@ -151,8 +151,6 @@ body {
   }
   .header_container .nav_links {
     display: block;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content;
     align-self: center;
     margin: 0;
@@ -220,8 +218,7 @@ body {
 .whyus_container .whyus_img_container .whyus_img {
   height: inherit;
   width: 190%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin-left: 50%;
   transform: translateX(-50%);
 }
@@ -239,8 +236,6 @@ body {
 .whyus_container .platform_cards_container .platform_card {
   display: block;
   margin: 30px auto;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
 }
 .whyus_container .platform_cards_container .card1 {
@@ -712,7 +707,7 @@ body {
   margin: 20px 20px 20px 0;
   display: flex;
 }
-.contact_container .form_container .policy input {
+.contact_container .form_container .policy .checkbox {
   margin-top: 5px;
   margin-right: 10px;
   padding-top: 5px;
@@ -722,6 +717,9 @@ body {
   font-family: var(--font-text);
   font-size: 12px;
   color: var(--grey-check);
+}
+.contact_container .form_container .policy .not_checked {
+  color: var(--red);
 }
 .contact_container .form_container .submit_container {
   display: flex;
@@ -766,6 +764,18 @@ body {
     width: 70%;
   }
 }
+.main_container_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999999;
+  padding-top: 20%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 footer {
   display: flex;
   justify-content: space-between;

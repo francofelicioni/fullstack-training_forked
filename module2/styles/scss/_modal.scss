@@ -1,0 +1,11 @@
+.main_container_modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999999;
+    padding-top: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+}

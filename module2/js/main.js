@@ -76,15 +76,13 @@ inputs.forEach((input) => {
 
 //Post form data
 form.addEventListener("submit", (e) => {
-    //validacion del checkbox & data;
     const nameValue = name.value;
     const emailValue = email.value;
 
     e.preventDefault();
 
-    if (checkbox.checked && nameValue && emailValue){
-        policy.classList.remove("not_checked");
-        //return postForm(URL_POST_FORM, nameValue, emailValue)
-    } else policy.classList.add("not_checked");
-    
+    if (checkbox.checked){
+        policy_label.classList.remove("not_checked");
+        (nameValue && emailValue) ? postForm(URL_POST_FORM, nameValue, emailValue) : alert('Fill the form complete.')
+    } else policy_label.classList.add("not_checked");
 })
