@@ -2,17 +2,19 @@ import PRICES from "../utils/constants.js";
 
 //Post form
 export const postForm = async ( url, name, email) => {
+    
     await fetch(url, {
         method: "POST",
         body: JSON.stringify({
-            name: name,
+            name: name ? name : null, //not ideal send name key w. newsletter
             email: email,
         }),
         headers: {
             'Content-type': 'application/json',
         },
     })
-        .then((response) => response.json());
+        .then((response) => response.json())
+        .then((data) => console.log('modal post', data))
 }
 
 

@@ -820,7 +820,7 @@ body {
   font-size: 20px;
   margin: 30px;
 }
-.main_container_modal .modal .form_modal .input_text {
+.main_container_modal .modal .form_modal .input_newsletter {
   font-family: var(--font-text);
   width: 50%;
   border: none;
@@ -829,8 +829,15 @@ body {
   height: 30px;
   padding: 5px;
 }
-.main_container_modal .modal .form_modal .input_text:focus-visible {
+.main_container_modal .modal .form_modal .input_newsletter:focus-visible {
   outline: none;
+}
+.main_container_modal .modal .form_modal .error {
+  border: 2px solid red;
+  border-radius: 10px;
+}
+.main_container_modal .modal .form_modal .correct {
+  border-bottom: 2px solid var(--green);
 }
 .main_container_modal .modal .form_modal .submit_newsletter {
   background-color: var(--blue);

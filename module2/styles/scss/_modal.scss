@@ -43,7 +43,7 @@
                 font-size: 20px;
                 margin: 30px;
             }
-            .input_text {
+            .input_newsletter {
                 font-family: var(--font-text);
                 width: 50%;
                 border: none;
@@ -56,7 +56,14 @@
                     outline: none;
                 }
             }
-            .submit_newsletter{
+            .error {
+                border: 2px solid red;
+                border-radius: 10px;
+            }
+            .correct {
+                border-bottom: 2px solid var(--green);
+            }
+            .submit_newsletter {
                 background-color: var(--blue);
                 box-shadow: 5px 10px 14px var(--blue-shadow);
                 border-radius: 35px;
