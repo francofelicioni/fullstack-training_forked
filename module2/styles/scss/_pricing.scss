@@ -8,6 +8,16 @@
         font-size: 36px;
         margin: 50px 0 20px 0;
     }
+    .exchange_container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        .exchange_pricing {
+            margin:auto;
+            font-family: var(--font-text);
+            border: 1px solid var(--blue);
+        }
+    }
 
     .cards_container {
         margin: 20px auto;

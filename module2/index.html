@@ -114,8 +114,15 @@
 
     <!-- PRICES -->
     <section class="pricing_container" id="pricing">
-        <h2 class="title">Pricing</h2>
 
+        <h2 class="title">Pricing</h2>
+        <div class="exchange_container">
+            <select class="exchange_pricing">
+                <option value="usd">USD - $</option>
+                <option value="eur">EUR - €</option>
+                <option value="gbp">GBP - £</option>
+            </select>
+        </div>
         <div class="cards_container">
             <div class="card_pricing" id="basic">
                 <div class="pricing_container_title">
@@ -280,7 +287,8 @@
                 </div>
                 <div class="policy">
                     <input type="checkbox" class="checkbox">
-                    <label class="policy_label">I hereby give consent for my personal data included in my application to be processed for the
+                    <label class="policy_label">I hereby give consent for my personal data included in my application to
+                        be processed for the
                         purposes of the recruitment process under the European Parliament’s and Council of the European
                         Union
                         Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the
@@ -295,7 +303,7 @@
             </form>
         </div>
     </section>
-    
+
     <!-- MODAL NEWSLETTER -->
     <div class='main_container_modal'>
         <div class="modal">
@@ -305,8 +313,8 @@
             <form class='form_modal'>
                 <h3>Newsletter Registration</h3>
                 <p>Enter your email to sign up for our weekly newsletter and to get discounts in our services!</p>
-                    <input class="input_text email" name="email" type="email" placeholder="Enter your email address"><br>
-                    <button class='submit_newsletter' type="submit"> Sign Up</button>
+                <input class="input_text email" name="email" type="email" placeholder="Enter your email address"><br>
+                <button class='submit_newsletter' type="submit"> Sign Up</button>
             </form>
         </div>
     </div>

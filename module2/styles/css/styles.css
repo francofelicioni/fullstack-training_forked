@@ -477,6 +477,16 @@ body {
   font-size: 36px;
   margin: 50px 0 20px 0;
 }
+.pricing_container .exchange_container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.pricing_container .exchange_container .exchange_pricing {
+  margin: auto;
+  font-family: var(--font-text);
+  border: 1px solid var(--blue);
+}
 .pricing_container .cards_container {
   margin: 20px auto;
 }

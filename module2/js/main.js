@@ -1,5 +1,5 @@
-import {REGEX, URL_POST_FORM} from "../utils/constants.js";
-import postForm from "../services/api_calls.js";
+import {REGEX, URL_POST_FORM, URL_GET_CURRENCIES} from "../utils/constants.js";
+import {postForm, getCurrencies} from "../services/api_calls.js";
 
 //Toggle menu de header
 document.querySelector(".burger_btn").addEventListener("click", (e) => {
@@ -116,11 +116,11 @@ function modalClosed(){
     }
 }
 
-//Close w. button
+    //Close w. button
 const closeBtn = document.querySelector(".close_btn_modal");
 closeBtn.addEventListener("click", modalClosed);
 
-//Close click outside
+    //Close click outside
 const modal = document.querySelector(".modal");
 window.addEventListener("click", (e) => {
     if(modal != e.target) {
@@ -128,7 +128,38 @@ window.addEventListener("click", (e) => {
     }
 })
 
-//Close w. ESC
+    //Close w. ESC
 window.addEventListener("keyup", (e) => {
     e.key === "Escape" ? modalClosed() : null;
 })
+
+//Exchange currency
+const selectedCurrency = document.querySelector(".exchange_pricing");
+const basicCard = document.querySelector("#basic .amount");
+const professionalCard = document.querySelector("#professional .amount");
+const premiumCard = document.querySelector("#premium .amount");
+
+selectedCurrency.addEventListener("change", async () => {
+    const valueCurrency = await getCurrencies(URL_GET_CURRENCIES, selectedCurrency.value);
+
+    if (selectedCurrency.value === 'eur'){
+
+        basicCard.innerText = `€ ${valueCurrency[0].toFixed(2)}`;
+        professionalCard.innerText = `€ ${valueCurrency[1].toFixed(2)}`;
+        premiumCard.innerText = `€ ${valueCurrency[2].toFixed(2)}`;
+
+    } else if (selectedCurrency.value === 'gbp') {
+
+        basicCard.innerText = `£ ${valueCurrency[0].toFixed(2)}`;
+        professionalCard.innerText = `£ ${valueCurrency[1].toFixed(2)}`;
+        premiumCard.innerText = `£ ${valueCurrency[2].toFixed(2)}`;
+
+    } else {
+
+        basicCard.innerText = `$ ${valueCurrency[0]}`;
+        professionalCard.innerText = `$ ${valueCurrency[1]}`;
+        premiumCard.innerText = `$ ${valueCurrency[2]}`;
+        
+    }
+    
+});
