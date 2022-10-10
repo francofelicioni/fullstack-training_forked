@@ -488,7 +488,7 @@ body {
   border: 1px solid var(--blue);
 }
 .pricing_container .cards_container {
-  margin: 20px auto;
+  margin: 50px auto;
 }
 .pricing_container .cards_container .card_pricing {
   display: flex;
@@ -641,6 +641,7 @@ body {
 #premium:hover {
     height: 500px !important;
     width: 405px !important;
+    margin:0 auto;
   }
 }
 @media only screen and (min-width: 1150px) {
@@ -651,7 +652,7 @@ body {
   }
 }
 .contact_container {
-  padding-left: 20px;
+  padding: 50px 0 20px 0;
 }
 .contact_container .header {
   font-family: var(--font-text);

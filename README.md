@@ -1,6 +1,6 @@
 Fullstack React training w. Oxygen
 
-1- Module 1: finished. (Miss icon switch in header)
+1- Module 2: finished.
 
 <div style="padding-left:80px">Follow these steps to review:
 
@@ -14,5 +14,4 @@ Fullstack React training w. Oxygen
 
 **Thanks for watching!** :raised_hands: :wave:
 
-   </div>
-   <hr/>
+</div>
